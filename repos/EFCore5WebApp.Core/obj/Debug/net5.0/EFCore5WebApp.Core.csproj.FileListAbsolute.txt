@@ -1,0 +1,12 @@
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\bin\Debug\net5.0\EFCore5WebApp.Core.deps.json
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\bin\Debug\net5.0\EFCore5WebApp.Core.dll
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\bin\Debug\net5.0\ref\EFCore5WebApp.Core.dll
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\bin\Debug\net5.0\EFCore5WebApp.Core.pdb
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.csproj.AssemblyReference.cache
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.AssemblyInfoInputs.cache
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.AssemblyInfo.cs
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.dll
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\ref\EFCore5WebApp.Core.dll
+C:\Users\devgu\source\repos\EFCore5WebApp.Core\obj\Debug\net5.0\EFCore5WebApp.Core.pdb
