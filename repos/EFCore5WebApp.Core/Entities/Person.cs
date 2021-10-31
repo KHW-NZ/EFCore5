@@ -20,6 +20,15 @@ namespace EFCore5WebApp.Core.Entities
 
         [Required]
         public string EmailAddress { get; set; }
+
+        [NotMapped]
+        public string FullName => $"{FirstName} {LastName}";
+
+        [DataType(DataType.DateTime)]
+        public DateTime CreatedOn { get; set; }
+
         public List<Address> Addresses { get; set; } = new List<Address>();
+        public List<Person> Parents { get; set; } = new List<Person>();
+        public List<Person> Children { get; set; } = new List<Person>();
     }
 }

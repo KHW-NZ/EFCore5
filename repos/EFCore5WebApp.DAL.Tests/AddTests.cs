@@ -66,7 +66,7 @@ namespace EFCore5WebApp.DAL.Tests
                 Assert.AreEqual(record.Addresses[i].AddressLine2, addedPerson.Addresses[i].AddressLine2);
                 Assert.AreEqual(record.Addresses[i].City, addedPerson.Addresses[i].City);
                 Assert.AreEqual(record.Addresses[i].State, addedPerson.Addresses[i].State);
-                Assert.AreEqual(record.Addresses[i].ZipCode, addedPerson.Addresses[i].ZipCode)
+                Assert.AreEqual(record.Addresses[i].ZipCode, addedPerson.Addresses[i].ZipCode);
                 Assert.AreEqual(record.Addresses[i].Country, addedPerson.Addresses[i].Country);
             }
         }

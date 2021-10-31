@@ -86,6 +86,11 @@ namespace EFCore5WebApp.DAL
                 new Address(){Id=2, AddressLine1="123 Michigan Ave", AddressLine2="", City="Chicago", State="IL", ZipCode="60612", PersonId=2, Country="USA"},
                 new Address(){Id=3, AddressLine1="100 1St St", AddressLine2="", City="Chicago", State="IL", ZipCode="60612", PersonId=2, Country="USA"},
             });
+
+            modelBuilder.Entity<Person>(entity =>
+            {
+                entity.HasMany(x => x.Addresses).WithOne(p => p.Person).HasForeignKey(f => f.PersonId).OnDelete(DeleteBehavior.Cascade);
+            });
         }
     }
 }

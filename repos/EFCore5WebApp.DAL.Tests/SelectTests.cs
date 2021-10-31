@@ -9,8 +9,7 @@ namespace EFCore5WebApp.DAL.Tests
     [TestFixture]
     public class SelectTests
     {
-        private AppDbContext _context;
-        private Microsoft.Extensions.Configuration.IConfiguration _configuration;
+        private AppDbContext _context;        
 
         [SetUp]
         public void Setup()
