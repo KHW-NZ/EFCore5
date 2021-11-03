@@ -40,7 +40,7 @@ namespace EFCore5WebApp.DAL.Tests
             var states = lookUps.Where(x => x.LookUpType == LookUpType.State).ToList();
 
             Assert.AreEqual(1, countries.Count);
-            Assert.AreEqual(51, states.Count);
+            Assert.AreEqual(50, states.Count);
         }
     }
 }

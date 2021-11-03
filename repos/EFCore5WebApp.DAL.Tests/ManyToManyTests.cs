@@ -105,8 +105,8 @@ namespace EFCore5WebApp.DAL.Tests
             parent2.Children.Add(child2);
 
             child1.Parents.Add(parent1);
-            child1.Parents.Add(parent1);
-            child2.Parents.Add(parent2);
+            child1.Parents.Add(parent2);
+            child2.Parents.Add(parent1);
             child2.Parents.Add(parent2);
 
             _family.Add(parent1);
