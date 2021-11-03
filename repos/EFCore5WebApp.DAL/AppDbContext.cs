@@ -2,12 +2,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using EFCore5WebApp.Core.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace EFCore5WebApp.DAL
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext: IdentityDbContext
     { 
         public DbSet<Person> Persons { get; set; }
         public DbSet<Address> Addresses { get; set; }
@@ -20,6 +21,13 @@ namespace EFCore5WebApp.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            /*
+             * This is important without adding this base.OnModelCreating(modelBuilder)
+             * Add-Migration InitialIdentity will not work properly with a following error
+             * The entity type 'IdentityUserLogin<string>' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types
+             * Found out the solution from the website : https://entityframework.net/knowledge-base/39798317/identityuserlogin-string---requires-a-primary-key-to-be-defined-error-while-adding-migration
+             */
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<LookUp>().HasData(new List<LookUp>() {
                 new LookUp() { Code = "AK", Description = "Alaska", LookUpType = LookUpType.State},
                 new LookUp() { Code = "AZ", Description = "Arizona",LookUpType = LookUpType.State},
