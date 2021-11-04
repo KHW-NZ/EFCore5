@@ -206,3 +206,4 @@ C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Index.cshtml.g.cs
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Reports\PeopleReport.cshtml.g.cs
