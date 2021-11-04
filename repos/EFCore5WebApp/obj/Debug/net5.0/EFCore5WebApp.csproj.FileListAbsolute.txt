@@ -199,3 +199,10 @@ C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Areas\Identity\
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Create.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Delete.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Details.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Edit.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\Contacts\Index.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\devgu\source\repos\EFCore5WebApp\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
