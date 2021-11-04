@@ -35,8 +35,15 @@ namespace EFCore5WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EFCore5WebApp.DAL.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connection")));            
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
+            services.AddDbContext<EFCore5WebApp.DAL.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connection")));
+            /*
+             * Following line has an error
+             * services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+             * Refer to following link
+             * https://mattferderer.com/NotSupportedException-No-IUserTwoFactorTokenProvider-tuser-named-default-registered
+             * Need to investigate further 
+             */
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>(TokenOptions.DefaultProvider);
             services.AddRazorPages();
             services.AddControllersWithViews();
 

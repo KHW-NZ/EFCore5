@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using EFCore5WebApp.Core.Entities;
 using EFCore5WebApp.DAL;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace EFCore5WebApp.Pages.Contacts
 {
-    public class CreateModel : PageModel
+    [Authorize(Roles =PageAccessRoles.AdminOnly)]
+    public class CreateModel : SecuredPageModel
     {
-        private readonly EFCore5WebApp.DAL.AppDbContext _context;
+        private readonly AppDbContext _context;
 
         [BindProperty(SupportsGet =true)]
         public List<SelectListItem> States { get; set; }
@@ -20,7 +23,7 @@ namespace EFCore5WebApp.Pages.Contacts
         [BindProperty(SupportsGet =true)]
         public List<SelectListItem> Countries { get; set; }
 
-        public CreateModel(EFCore5WebApp.DAL.AppDbContext context)
+        public CreateModel(AppDbContext context, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager) : base(context, signInManager, userManager)
         {
             _context = context;
         }

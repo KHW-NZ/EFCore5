@@ -7,14 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EFCore5WebApp.Core.Entities;
 using EFCore5WebApp.DAL;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace EFCore5WebApp.Pages.Contacts
 {
-    public class DeleteModel : PageModel
+    [Authorize(Roles =PageAccessRoles.AdminOnly)]
+    public class DeleteModel : SecuredPageModel
     {
-        private readonly EFCore5WebApp.DAL.AppDbContext _context;
+        private readonly AppDbContext _context;
 
-        public DeleteModel(EFCore5WebApp.DAL.AppDbContext context)
+        public DeleteModel(AppDbContext context, SignInManager<IdentityUser> signInManage, UserManager<IdentityUser> userManager) : base(context, signInManage, userManager)
         {
             _context = context;
         }
